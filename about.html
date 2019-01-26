@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>About Band</title>
+		<link href="https://fonts.googleapis.com/css?family=Cinzel:400,700,900" rel="stylesheet">
+		<link href="css/style.css" type="text/css" rel="stylesheet">
+		
+		<style>
+			.about-page-container {
+				background: url('img/main_background.png') no-repeat center;
+				background-size: cover;
+				height: auto;
+				width: 100%;
+				text-align: center;
+			}
+			
+			.about-page-container h1 {
+				margin-bottom: 20px;
+			}
+			
+			.biography-box, .image-box {
+				width: 90%;
+				margin: 0 auto;
+				
+			}
+			
+			.biography-box {
+				margin-bottom: 50px;
+			}
+			
+			.biography-box p {
+				font-size: 90%;
+				line-height: 145%;
+			}
+			
+			.biography-box p:last-of-type {
+				margin-bottom: 40px;
+			}
+			
+			.biography-box a {
+				margin-right: 8px;
+			}
+			
+			.image-box {
+				padding-bottom: 50px;
+			}
+			
+			@media screen and (min-width: 1025px){
+				.about-page-container {
+					display: flex;
+					height: 100vh;
+					justify-content: space-between;
+				}
+				
+				.biography-box, .image-box {
+					width: 50%;
+				}
+				
+				.biography-box {
+					padding: 0 40px;
+				}
+				
+				.biography-box img {
+					width: 50%;
+				}
+				
+				.image-box {
+					padding-bottom: 0;
+				}
+				
+				.image-box img {
+					padding: 120px 120px;
+				}
+				
+				.biography-box p:last-of-type {
+					margin-bottom: 70px;
+				}
+				
+				.biography-box a {
+					margin-right: 20px;
+				}
+			}
+			
+			@media screen and (max-width: 320px){
+				.button {
+					padding: 4px 4px;
+				}
+			}
+		
+		</style>
+	</head>
+	<body>
+		<div class="about-page-container">
+			<div class="biography-box">
+				<img src="img/logo.png" alt="logo of the band">
+				<h1>Biography</h1>
+				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.  Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid.</p>
+				<br>
+				<p> Consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid.</p>
+				
+				<a href="#" class="button">Press Kit</a>
+				<a href="#" class="button">Logo</a>
+				<a href="#" class="button">Rider</a>
+			</div>
+			
+			<div class="image-box">
+				<img src="img/theBand.png" alt="picture of the band">
+			</div>
+		</div>
+	</body>
+</html>

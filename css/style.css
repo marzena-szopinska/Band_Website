@@ -1,0 +1,508 @@
+* {
+    /* remove all margins and paddings */
+    margin: 0;
+    padding: 0;
+    /* the width and height properties
+     includes content, padding and border, but not the margin */
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* basic set up */
+html, body {
+    background-color: #fff;
+    color:  #fff;
+    font-size: 20px;
+	font-family: 'Cinzel', serif;
+    font-weight: 400;
+	text-transform: uppercase;
+}
+
+a {
+	/* remove added by default underline */
+	text-decoration: none;
+	/* set link color to white */
+	color: #fff;
+}
+
+img, iframe {
+	width: 100%;
+	height: auto;
+}
+
+.button {
+	/* add white border to the link */
+	border: 2px solid #fff;
+	/* add some space between the content and the border to resamble button */
+	padding: 8px 10px;
+}
+
+.button:hover, .button:focus {
+	/* add line through to the text on hover */
+	text-decoration: line-through;
+	/* change background */
+	background-color: rgba(59, 59, 59, 0.75);
+}
+
+
+/* ************************ HEADER ********************** */
+/* ****************************************************** */
+.header-container {
+	/* set its width and height to fill in the whole browser viewport */
+	width: 100%;
+	height: 100vh;
+	/* add background */
+	background: url('../img/main_background.png') no-repeat center;
+	background-size: cover;
+	background-attachment: fixed;
+	/* flexbox */
+	display: flex;
+	/* center boxes horizontly */
+	justify-content: center;
+	/* ceter boxes verticaly */
+	align-items: center;
+	/* display all boxes as a column */
+	flex-direction: column;
+	/* center the text */
+	text-align: center;
+	/* set position to relative */
+	position: relative;
+	
+}
+
+.gif {
+	/* set fixed width to 60px */
+	width: 60px;
+}
+
+.logo-box {
+	/* set how hight the logo should be */
+	height: 125px;
+
+}
+
+.logo-box img {
+	/* set fixed with to 290px */
+	width: 290px;
+}
+
+.hero-text-box, .hero-link-box, .gif-box {
+	/* set box width to 80%*/
+	width: 80%;
+	
+}
+
+.hero-text-box p {
+	/* decrease font size of the header text */
+	font-size: 95%;
+}
+
+.hero-link-box {
+	margin-top: 25px;
+	/* decrease the font size */
+	font-size: 90%;
+	margin-bottom: 60px;
+}
+
+.gif-box {
+	/* align the content to the bottom of the container */
+	position: absolute;
+	bottom: 10px;
+}
+
+@media screen and (min-width: 765px){
+	.hero-link-box {
+		margin-top: 40px;
+	}
+	
+	.hero-text-box p {
+		font-size: 100%;
+	}
+	
+	.logo-box {
+		height: 220px;
+	}
+	
+	.logo-box img {
+		width: 515px;
+	}
+}
+
+/*.header-container video {
+	position: fixed;
+	min-width: 100%;
+	min-height: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	z-index: -100;
+}*/
+
+/* ************************ ABOUT *********************** */
+/* ****************************************************** */
+
+.about-container {
+	/* set background color to black */
+	background-color: #050312;
+	/* apply flexbox */
+	display: flex;
+	/* make a column */
+	flex-direction: column;
+	/* center the column */
+	align-items: center;
+}
+
+.title-box h1 {
+	/* increase font size */
+	font-size: 160%;
+	padding-top: 70px;
+	margin-bottom: 15px;
+}
+
+.img-band-box {
+	width: 100%;
+}
+
+.button-box  {
+	/* add spece at the top and at the bottom of the button */
+	padding-top: 35px;
+	padding-bottom: 55px;
+}
+
+@media screen and (min-width: 765px){
+	.img-band-box {
+		/* decrease the size of this box */
+		width: 80%;
+	}
+	
+	.title-box h1{
+		/* increase font size */
+		font-size: 200%;
+		padding-top: 70px;
+	}
+	
+	.img-band-box img {
+	/* move the image to the left so the button and the text in the image will be properly aligned */
+	padding-right: 26px;
+	}
+}
+
+
+/* ************************ VIDEO *********************** */
+/* ****************************************************** */
+
+.clip-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	background: url('../img/clip-background.jpg') no-repeat center;
+	background-size: cover;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	text-align: center;
+	padding-bottom: 35px;
+	padding-top: 45px;
+}
+
+.clip-container h1 {
+	position: absolute;
+	left: 50%;
+	top: 62%; /* 71 */
+	transform: translate(-50%, -50%);
+	background-color: #292929;
+	padding: 10px 10px;
+	font-size: 90%;
+	
+}
+
+.main-video-box {
+	margin-bottom: 100px;
+}
+
+.main-video-box, .video-box {
+	width: 100%;
+}
+
+.main-video-box iframe {
+	height: 300px;
+}
+
+.video-box {
+	display: flex;
+	justify-content: space-between;
+}
+
+.video {
+	width: 49%;
+}
+
+@media screen and (min-width: 769px){
+	
+	.clip-container h1 {
+		font-size: 160%;
+		top: 57%;
+		padding: 15px 15px;
+	}
+	
+	.main-video-box, .video-box {
+		width: 70%;
+	}
+
+	.main-video-box iframe{
+		height: 500px;
+	}
+	
+	.video {
+	width: 40%;
+	}
+	
+	.video iframe {
+		height: 300px;
+	}
+}
+
+
+/* ************************ TABLE *********************** */
+/* ****************************************************** */
+.tours-container {
+	height: 100vh;
+	width: 100%;
+	background: url('../img/tour-background.jpeg') no-repeat center;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: left;
+}
+
+.table-box {
+	overflow-x: auto;
+	width: 85%;
+	
+}
+
+table {
+	font-size: 70%;
+	width: 100%;
+	border-collapse: collapse;
+    border-spacing: 0;
+	opacity: 0.95;
+	padding: 10px 0;
+	height: 500px;
+}
+
+th, td {
+    padding: 8px 8px;
+}
+
+td {
+		text-align: center;
+}
+
+tr:nth-child(even){
+	background-color: rgba(54, 54, 54, 0.75);
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+@media screen and (min-width: 769px) {
+	table {
+	font-size: 95%;
+	}
+}
+
+
+/* ************************ STORE *********************** */
+/* ****************************************************** */
+
+.store-container {
+	height: 100vh;
+	width: 100%;
+	background: url('../img/shop-background.jpg') no-repeat center;
+	background-size: cover;
+	background-attachment: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.store-text-box {
+	width: 85%;
+	height: 200px;
+}
+
+.store-text-box h2 {
+	margin-bottom: 35px;
+	font-size: 120%;
+}
+
+span {
+	color: #acacac;
+}
+
+
+@media screen and (min-width: 769px){
+	.store-text-box h2 {
+		font-size: 230%;
+	}
+}
+
+/* ************************ MUSIC *********************** */
+/* ****************************************************** */
+
+.album-container {
+	width: 100%;
+	background: url('../img/main_background.png') no-repeat center;
+	background-size: cover;
+	text-align: center;
+	
+}
+
+.album-container h2 {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.big p {
+	margin-bottom: 20px;
+}
+
+.big img {
+	padding-bottom: 20px;
+}
+
+.album-box:first-of-type {
+	padding-bottom: 20px;
+}
+
+.album-box:last-of-type img:last-of-type {
+	margin-top: 50px;
+	padding-bottom: 50px;
+}
+
+.album-box a {
+	margin-right: 20px;
+}
+
+
+.album-box {
+	margin: 0 auto;
+	width: 60%;
+}
+
+@media screen and (min-width: 769px) {
+	
+	.album-container {
+		padding-bottom: 80px;
+	}
+	
+	.album-container h2 {
+		font-size: 200%;
+	}
+	
+	.music-container {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		text-align: center;
+	}
+	
+	.album-box {
+		width: 20%;
+	}
+
+	
+	.big {
+		width: 33%;
+	}
+	
+	.big p {
+		margin: 40px 0;
+		font-size: 120%;
+	}
+}
+
+/* ************************ FOOTER ********************** */
+/* ****************************************************** */
+
+.footer-container {
+	width: 100%;
+	background: linear-gradient(rgba(31, 31, 31, 0.75),rgba(31, 31, 31, 0.75), rgba(31, 31, 31, 0.75)), url('../img/footer.jpg') no-repeat top;
+	background-size: cover;
+	text-align: center;
+	/*height: 30vh;*/
+}
+
+.footer-container h2 {
+	padding-top: 50px;
+	margin-bottom: 20px;
+}
+
+.footer-box {
+	margin: 0 auto;
+	width: 85%;
+	height: 200px;
+}
+
+.contact-box {
+	width: 100%;
+	/*flex: 1;*/
+}
+
+.contact-box:first-of-type {
+	margin-bottom: 10px;
+}
+
+input {
+	margin-bottom: 40px;
+	border: 2px solid #a5a5a5;
+    border-radius: 4px;
+	padding: 4px 4px;
+	text-align: center;
+}
+
+.footer-box span {
+	color: #9f9049;
+	margin-right: 10px;
+}
+
+
+@media screen and (min-width: 769px){
+	.footer-box {
+		display: flex;
+		flex-direction: column;
+		height: 300px;
+	}
+	
+	.contact-box p {
+		margin-bottom: 20px;
+	}
+	
+	.contact-box span, .contact-box input {
+		display: block;
+	}
+	
+	input {
+		width: 30%;
+		margin-bottom: 30px;
+		margin-top: 20px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+}
+
+
+
+
+
+
+
+
+
